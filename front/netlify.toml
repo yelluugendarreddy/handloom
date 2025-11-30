@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  # If/when you add serverless functions, put them in this folder
+  directory = "netlify/functions"
+
+[context.production.environment]
+# Add VITE_API_BASE in Netlify project settings (this file is only a hint)
+# VITE_API_BASE = "https://api.example.com"
+
+[build.environment]
+# During Netlify build, ensure the right NODE_ENV if needed
+NODE_ENV = "production"
